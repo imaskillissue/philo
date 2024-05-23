@@ -4,6 +4,7 @@
 #include <pthread.h>
 #include <stdbool.h>
 #include <sys/time.h>
+#include <stdio.h>
 
 typedef struct s_philo
 {
@@ -28,6 +29,10 @@ typedef struct s_simulation
     t_philo *philosophers;
     struct timeval start_time;
 }               t_simulation;
+
+// Util function
+bool init_simulation(t_simulation *simulation, int argc, char **argv);
+void cleanup_simulation(t_simulation *simulation);
 
 // Philosopher actions
 void take_forks(t_philo *philo);
