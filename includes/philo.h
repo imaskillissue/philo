@@ -32,6 +32,7 @@ typedef struct s_simulation
 
 // Util function
 bool init_simulation(t_simulation *simulation, int argc, char **argv);
+bool start_simulation(t_simulation *simulation);
 void cleanup_simulation(t_simulation *simulation);
 
 // Philosopher actions
